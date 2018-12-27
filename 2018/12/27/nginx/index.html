@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/12 | Hexo</title>
+  <title>nginx | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/12/index.html">
+  <meta name="description" content="哈哈">
+<meta name="keywords" content="tag1,tag2,tag3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx">
+<meta property="og:url" content="http://yoursite.com/2018/12/27/nginx/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="哈哈">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-27T08:38:15.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="nginx">
+<meta name="twitter:description" content="哈哈">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,36 +155,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-nginx" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      nginx
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/27/nginx/" class="archive-article-date">
+
+        
+        <a href="/2018/12/27/nginx/" class="archive-article-date">
   	<time datetime="2018-12-27T08:30:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/27/nginx/">nginx</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="nginx-学习"><a href="#nginx-学习" class="headerlink" title="nginx 学习"></a>nginx 学习</h3><ul>
+<li>先检查是否存在nginx<ul>
+<li>yum list | grep nginx</li>
+</ul>
+</li>
+<li>自行配置nginx源<ul>
+<li>vim /etc/yum.repos.d/nginx.repo</li>
+<li>你需要修改一下对应的操作系统和版本号，因为我的是centos和7的版本     </li>
+<li>baseurl=<a href="http://nginx.org/packages/centos/7/$basearch/" target="_blank" rel="noopener">http://nginx.org/packages/centos/7/$basearch/</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/7/$basearch/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>开始安装<ul>
+<li>yum install nginx</li>
+</ul>
+</li>
+<li>查看版本<ul>
+<li>nginx -v</li>
+</ul>
+</li>
+<li>查看nginx的安装目录<ul>
+<li>rpm -ql nginx</li>
+</ul>
+</li>
+<li>nginx.conf 文件是Nginx总配置文件<ul>
+<li>cd /etc/nginx</li>
+<li>cat nginx.conf<ul>
+<li>最后一行 include /etc/nginx/conf.d/*.conf; #包含的子配置项位置和文件</li>
+<li>cd  /etc/nginx/conf.d<ul>
+<li>cat default.conf</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>我们的服务目录放在了/usr/share/nginx/html下<!--more-->
+<h3 id="使用nginx"><a href="#使用nginx" class="headerlink" title="使用nginx"></a>使用nginx</h3></li>
+<li>直接启动nginx<ul>
+<li>nginx</li>
+</ul>
+</li>
+<li>使用systemctl命令启动<ul>
+<li>systemctl start nginx.service</li>
+</ul>
+</li>
+<li>查看哪些nginx 服务已经启动</li>
+<li>停止nginx<ul>
+<li>立马停止:强制停止进程<ul>
+<li>nginx -s stop</li>
+</ul>
+</li>
+<li>从容停止:等当前进程结束才停止<ul>
+<li>nginx -s quit</li>
+</ul>
+</li>
+<li>killall 杀死进程<ul>
+<li>killall nginx</li>
+</ul>
+</li>
+<li>systemctl 停止<ul>
+<li>systemctl stop nginx.service</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>重启nginx<ul>
+<li>systemctl restart nginx.service</li>
+</ul>
+</li>
+<li>重新载入配置文件(在重新编写或者修改Nginx的配置文件后)<ul>
+<li>nginx -s reload</li>
+</ul>
+</li>
+<li>查看端口占用情况<ul>
+<li>netstat -tlnp</li>
+</ul>
+</li>
+<li>配置默认选项比如500 404等页面<ul>
+<li>vim /etc/nginx/conf.d/default.conf<h3 id="控制访问权限"><a href="#控制访问权限" class="headerlink" title="控制访问权限"></a>控制访问权限</h3></li>
+</ul>
+</li>
+<li><p>屏蔽某个ip访问你的网站</p>
+<ul>
+<li><p>vim /etc/nginx/conf.d/default.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /&#123;</span><br><span class="line">    deny   123.9.51.42;</span><br><span class="line">    allow  45.76.202.231;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后重启 systemctl restart nginx.service</li>
+</ul>
+</li>
+<li><p>控制访问目录</p>
+<ul>
+<li><p>vim /etc/nginx/conf.d/default.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location =/img &#123;</span><br><span class="line">    allow  all;</span><br><span class="line">&#125;</span><br><span class="line">location =/admin &#123;</span><br><span class="line">    deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后重启 systemctl restart nginx.service</p>
+</li>
+</ul>
+</li>
+<li><p>使用正则表达式设置访问权限 </p>
+<ul>
+<li><p>vim /etc/nginx/conf.d/default.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~\.php &#123;</span><br><span class="line">    deny  all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后重启 systemctl restart nginx.service</p>
+<h3 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h3></li>
+</ul>
+</li>
+<li>基于端口</li>
+<li><p>修改默认配置</p>
+<ul>
+<li>vim /etc/nginx/conf.d/default.conf<ul>
+<li>新增以一个server<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8001;</span><br><span class="line">    server_name localhost;</span><br><span class="line">    root /usr/share/nginx/html/html8001</span><br><span class="line">    index index.html</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>cd /usr/share/nginx/html</p>
+<ul>
+<li>mkdir html8001</li>
+<li>cd html8001 </li>
+<li>touch index.html</li>
+<li>重启nginx配置</li>
+</ul>
+</li>
+<li>基于ip创建<ul>
+<li>只需要把基于端口中的 server_name 112.74.171.00 即可</li>
+</ul>
+</li>
+<li>以域名创建   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name nginx.iview.top;</span><br><span class="line">    root /usr/share/nginx/html/html8001</span><br><span class="line">    index index.html</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><ul>
+<li>接下来我们当我们访问nginx.iview.top会被代理到nginx2.iview.top 上  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    server_name nginx.iview.top;</span><br><span class="line">&#125;</span><br><span class="line">location / &#123;</span><br><span class="line">    proxy_pass http://nginx1.iview.top; 这里必须是个有效http地址</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="利用-http-user-agent-来判断是否是移动端还是pc端"><a href="#利用-http-user-agent-来判断是否是移动端还是pc端" class="headerlink" title="利用$http_user_agent 来判断是否是移动端还是pc端"></a>利用$http_user_agent 来判断是否是移动端还是pc端</h1><ul>
+<li>在/etc/nginx/conf.d 目录下 新建一个8001.conf文件</li>
+<li>在 /usr/share/nginx/html下新建pc和mobile目录 并建立对应index.html</li>
+<li>内容如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">    listen 8001;</span><br><span class="line">    server_name localhost;</span><br><span class="line">    location / &#123;</span><br><span class="line">        root /usr/share/nginx/html/pc;</span><br><span class="line">        if($http_user_agent ~* &apos;(Android|webOS|iPhone|iPod|BlackBerry)&apos;)&#123;</span><br><span class="line">            root /usr/share/nginx/html/mobile;</span><br><span class="line">        &#125;</span><br><span class="line">        index index.html;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#开启gzip压缩</p>
+<ul>
+<li>vim /etc/nginx/nginx.conf  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    gzip on;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><ul>
+<li>常用的几个文件<br> 总配置文件<br> /etc/nginx/nginx.conf<br> 子配置文件目录<br> /etc/nginx/conf.d</li>
+<li>常用的命令<ul>
+<li>重启配置 nginx -s reload</li>
+<li>重启nginx systemctl restart nginx.service</li>
+</ul>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -199,92 +384,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/27/nginx/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/27/postName/" class="archive-article-date">
-  	<time datetime="2018-12-27T08:16:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/27/postName/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">27号随笔</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/27/postName/">27号随笔</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag1</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag2</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/27/hello-world/" class="archive-article-date">
-  	<time datetime="2018-12-27T07:01:35.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/27/hello-world/">我的世界</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -307,8 +506,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
