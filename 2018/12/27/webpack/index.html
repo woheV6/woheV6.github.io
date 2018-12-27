@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>linux | Hexo</title>
+  <title>webpack | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ssh连接远程服务器   12ssh username@112.74.171.711输入密码：******  新增用户   1234adduser zhangsanpasswd zhangsan这个时候 /home 下面就有了一个zhangsan的目录/etc/passwd 和/etc/shadow 都会生成一条记录">
+  <meta name="description" content="webpack 学习 安装 npm i webpack -D 在scripts 加一项 “build”:”webpack”   新增webpack.config.js配置文件   123456789mudule.exports=&amp;#123;    entry:&amp;#123;        entry:&amp;apos;./src/entry.js // 入口文件    &amp;#125;,    output:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux">
-<meta property="og:url" content="http://yoursite.com/2018/12/27/linux/index.html">
+<meta property="og:title" content="webpack">
+<meta property="og:url" content="http://yoursite.com/2018/12/27/webpack/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ssh连接远程服务器   12ssh username@112.74.171.711输入密码：******  新增用户   1234adduser zhangsanpasswd zhangsan这个时候 /home 下面就有了一个zhangsan的目录/etc/passwd 和/etc/shadow 都会生成一条记录">
+<meta property="og:description" content="webpack 学习 安装 npm i webpack -D 在scripts 加一项 “build”:”webpack”   新增webpack.config.js配置文件   123456789mudule.exports=&amp;#123;    entry:&amp;#123;        entry:&amp;apos;./src/entry.js // 入口文件    &amp;#125;,    output:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-27T09:14:36.390Z">
+<meta property="og:updated_time" content="2018-12-27T09:16:32.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux">
-<meta name="twitter:description" content="ssh连接远程服务器   12ssh username@112.74.171.711输入密码：******  新增用户   1234adduser zhangsanpasswd zhangsan这个时候 /home 下面就有了一个zhangsan的目录/etc/passwd 和/etc/shadow 都会生成一条记录">
+<meta name="twitter:title" content="webpack">
+<meta name="twitter:description" content="webpack 学习 安装 npm i webpack -D 在scripts 加一项 “build”:”webpack”   新增webpack.config.js配置文件   123456789mudule.exports=&amp;#123;    entry:&amp;#123;        entry:&amp;apos;./src/entry.js // 入口文件    &amp;#125;,    output:">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,66 +154,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linux" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-webpack" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      linux
+      webpack
     </h1>
   
 
         
-        <a href="/2018/12/27/linux/" class="archive-article-date">
-  	<time datetime="2018-12-27T09:11:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
+        <a href="/2018/12/27/webpack/" class="archive-article-date">
+  	<time datetime="2018-12-27T09:16:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>ssh连接远程服务器</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh username@112.74.171.711</span><br><span class="line">输入密码：******</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新增用户</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adduser zhangsan</span><br><span class="line">passwd zhangsan</span><br><span class="line">这个时候 /home 下面就有了一个zhangsan的目录</span><br><span class="line">/etc/passwd 和/etc/shadow 都会生成一条记录</span><br></pre></td></tr></table></figure>
-</li>
+        <h3 id="webpack-学习"><a href="#webpack-学习" class="headerlink" title="webpack 学习"></a>webpack 学习</h3><ul>
+<li>安装<ul>
+<li>npm i webpack -D</li>
+<li>在scripts 加一项 “build”:”webpack”</li>
 </ul>
-<a id="more"></a>
+</li>
+<li><p>新增webpack.config.js配置文件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mudule.exports=&#123;</span><br><span class="line">    entry:&#123;</span><br><span class="line">        entry:&apos;./src/entry.js // 入口文件</span><br><span class="line">    &#125;,</span><br><span class="line">    output:&#123;</span><br><span class="line">        path:path.resolve(__dirname,&apos;dist&apos;), //输出路径</span><br><span class="line">        filename:&apos;bundle.js&apos; // 输出的文件名</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加载css 文件</p>
 <ul>
-<li><p>删除用户</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userdel zhangsan </span><br><span class="line">userdel -r zhangsan  连home目录下的记录都给删除掉</span><br></pre></td></tr></table></figure>
+<li>安装两个loader<ul>
+<li>style-loader 用来处理css中的url()</li>
+<li>css-loader 用来将css加入到style中  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">module:&#123;</span><br><span class="line">      rules:[</span><br><span class="line">          &#123;</span><br><span class="line">              test:/\.css$/,</span><br><span class="line">              use:[&apos;style-loader&apos;,&apos;css-loader&apos;]</span><br><span class="line">          &#125;</span><br><span class="line">      ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>显示用户信息</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cut -d : -f 1 /etc/passwd</span><br><span class="line">id zhangsan</span><br></pre></td></tr></table></figure>
+</ul>
 </li>
-<li><p>用户登陆历史记录</p>
+</ul>
+</li>
+<li><p>压缩js</p>
 <ul>
-<li>last</li>
+<li>使用webpack自带的uglifyjs-webpack-plugin<ul>
+<li>在webpack.config.js新增如下代码  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const nglify=require(&apos;uglifyjs-webpack-plugin&apos;)</span><br><span class="line"></span><br><span class="line">plugins:[</span><br><span class="line">    new nglify()</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>查看登陆用户<ul>
-<li>who</li>
 </ul>
 </li>
-<li><p>给普通用户添加root权限</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">visudo 修改编辑修改/etc/sudoers配置文件</span><br><span class="line">在root  ALL=(ALL) ALL</span><br><span class="line">下面添加你的用户名 username ALL=(ALL)  ALL</span><br><span class="line">这句话的意思是 username这个用户可以在任何地方（ALL）登陆执行任何人(ALL)的任何命令(ALL)</span><br><span class="line">切换到username 这个用户下 执行sudo mkdir 等操作</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看用户组</p>
+<li><p>加载html</p>
 <ul>
-<li>cat /etc/group</li>
+<li>需要 html-webpack-plugin 需要自己安装 npm i html-webpack-plugin -D</li>
+<li>在webpack.config.js新增如下代码<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const htmlPlugin=require(&apos;html-webpack-plugin&apos;)</span><br><span class="line"></span><br><span class="line">plugins:[</span><br><span class="line">    new htmlPlugin(&#123;</span><br><span class="line">        minify:&#123;</span><br><span class="line">            removeAttributeQuotes:true //却掉属性的双引号。</span><br><span class="line">        &#125;,</span><br><span class="line">        hash:true, //为了开发中js有缓存效果，所以加入hash，这样可以有效避免缓存JS。</span><br><span class="line">        template:&apos;./src/index.html&apos; //是要打包的html模版路径和文件名称。</span><br><span class="line">    &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</code></pre></li>
 </ul>
 </li>
-<li>新增用户组<ul>
-<li>groupadd</li>
+<li><p>加载图片</p>
+<ul>
+<li>使用webpack自带的uglifyjs-webpack-plugin<ul>
+<li>在webpack.config.js新增如下代码  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const nglify=require(&apos;uglifyjs-webpack-plugin&apos;)</span><br><span class="line"></span><br><span class="line">plugins:[</span><br><span class="line">    new nglify()</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>删除用户组<ul>
-<li>droupdel</li>
 </ul>
+</li>
+<li><p>加载html</p>
+<ul>
+<li>需要 url-loader file-loader 需要自己安装 npm i url-loader file-loader -D</li>
+<li>在webpack.config.js新增如下代码<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">module:&#123;</span><br><span class="line">    rules:[</span><br><span class="line">        &#123;</span><br><span class="line">            test:/\.css$/,</span><br><span class="line">            use:[&apos;style-loader&apos;,&apos;css-loader&apos;]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            test:/\.(png|jpg|gif)/,</span><br><span class="line">            use:[&#123;</span><br><span class="line">                loader:&apos;url-loader&apos;,</span><br><span class="line">                options:&#123;</span><br><span class="line">                    limit:50000 // 当图片小于50000B的时候会转成base64,否则使用file-loader 生产hash文件</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+</li>
+<li><p>分离css</p>
+<ul>
+<li>需要 extract-text-webpack-plugin 插件 cnpm i -D extract-text-webpack-plugin<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">const extractTextPlugin = require(&quot;extract-text-webpack-plugin&quot;);</span><br><span class="line">module:&#123;</span><br><span class="line">    rules:[</span><br><span class="line">        &#123;</span><br><span class="line">            test:/\.css$/,</span><br><span class="line">            use: extractTextPlugin.extract(&#123;</span><br><span class="line">                fallback: &quot;style-loader&quot;,</span><br><span class="line">                use: &quot;css-loader&quot;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br><span class="line">plugins:[</span><br><span class="line">    new extractTextPlugin(&quot;./css/index.css&quot;)</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>解决html中引用图片</p>
+<ul>
+<li>需要 html-withimg-loader</li>
+<li>cnpm i html-withimg-loader -D<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module:[</span><br><span class="line">    &#123;</span><br><span class="line">       test: /\.(htm|html)$/i,</span><br><span class="line">       use:[ &apos;html-withimg-loader&apos;] </span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>加上css 前缀</p>
+<ul>
+<li>npm install –save-dev postcss-loader autoprefixer</li>
+<li><p>新建postcss.config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports=&#123;</span><br><span class="line">    plugins:[require(&apos;autoprefixer&apos;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 test:css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    test: /\.css$/,</span><br><span class="line">    use: extractTextPlugin.extract(&#123;</span><br><span class="line">        fallback: &apos;style-loader&apos;,</span><br><span class="line">        use: [</span><br><span class="line">            &#123; loader: &apos;css-loader&apos;, options: &#123; importLoaders: 1 &#125; &#125;,</span><br><span class="line">            &apos;postcss-loader&apos;</span><br><span class="line">        ]</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>消除没有用的css 使用purifycss-webpack 插件</p>
+<ul>
+<li>cnpm i -D purifycss-webpack purify-css</li>
+<li>引入node 的glob对象，在webpack.config.js头部引入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const glob= require(&apos;glob&apos;)</span><br><span class="line">const PurifyPlugin=require(&apos;purifycss-webpack&apos;)</span><br><span class="line">在plugins下新增一项</span><br><span class="line">new PurifyPlugin(&#123;</span><br><span class="line">   paths:glob.sync(path.join(__dirname,&apos;src/*.html&apos;))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>转译 es8102 到 es5</p>
+<ul>
+<li>cnpm i babel-core  babel-loader  babel-preset-es2015 babel-preset-react -D</li>
+<li><p>新增.babelrc配置文件在根目录</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">     &quot;presets&quot;: [&quot;es2015&quot;,&quot;react&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+<li><p>修改webpack.config.js</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    test:/\.(js|jsx)$/,</span><br><span class="line">    use:&#123;</span><br><span class="line">        loader:&apos;babel-loader&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    exclude:/node_modules/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+</li>
+<li><p>使用更流行的”env” babel-preset-env</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;presets&quot;: [&quot;env&quot;,&quot;react&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+<li><p>全局引入外部库 jquery</p>
+<ul>
+<li>利用webpack自带的 ProvidePlugin 插件</li>
+<li></li>
+<li>cnpm i -S jquery</li>
+<li>修改webpack.config.js ； </li>
+<li>引入ProvidePlugin 新增一项 plugin<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const webpack=require(&apos;webpack&apos;)</span><br><span class="line">new webpack.ProvidePlugin(&#123;</span><br><span class="line">    $:&apos;jquery&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>配置watch 自动保存 打包dist</p>
+<ul>
+<li>webpack –watch</li>
+<li>添加配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">watchOptions:&#123;</span><br><span class="line">    // 检测修改的时间</span><br><span class="line">    poll:1000,</span><br><span class="line">    // 防止500毫秒内重复打包</span><br><span class="line">    aggregateTimeout:500, </span><br><span class="line">    // 不监听目录</span><br><span class="line">    ignored:/node_modules/, </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>给你的文件加上备注</p>
+<ul>
+<li>new webpack.BannerPlugin(‘zhangsan coding!’)</li>
+</ul>
+</li>
+</ul>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
+<li>使用webpack.ProvidePlugin<ul>
+<li>比如我们定义了一个jquery,只有有使用才会打包进去</li>
+<li>如果是import jquery from ‘jquery’ 这种方式 不管你项目里使用没使用都会打包进去</li>
+</ul>
+</li>
+<li><p>抽离第三方类库</p>
+<ul>
+<li><p>修改入口文件 entry.config.js,新加两项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jquery:&apos;jquery&apos;,</span><br><span class="line">vue:&apos;vue&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增插件 webpack.optimize.CommonsChunkPlugin</p>
+<ul>
+<li>这样就把这些公用文件从entry.js中分离出来了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">    name:[&apos;jquery&apos;,&apos;vue&apos;],</span><br><span class="line">    filename:&apos;static/js/[name].min.js&apos;,</span><br><span class="line">    minChunk:2</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>拷贝静态文件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const copyWebpackPlugin= require(&quot;copy-webpack-plugin&quot;);</span><br><span class="line">new copyWebpackPlugin([&#123;</span><br><span class="line">    from:&apos;public&apos;,</span><br><span class="line">    to:&apos;public&apos;,</span><br><span class="line">    ignore: [&apos;.*&apos;]</span><br><span class="line">&#125;])</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -295,7 +395,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/27/linux/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/27/webpack/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,18 +409,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/27/webpack/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          webpack
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/27/nginx/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">nginx</div>
+    <a href="/2018/12/27/linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux</div>
       <i class="icon-circle-right"></i>
     </a>
   
